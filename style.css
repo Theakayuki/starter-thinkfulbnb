@@ -31,7 +31,9 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  margin-bottom: 1rem;
+
 }
 
 /* ---  Groups & Items --- */
@@ -56,12 +58,24 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 90%;
+  padding-bottom: 1rem;
 }
 
 header nav ul li {
@@ -83,16 +97,23 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 form label {
   font-weight: bold;
+  margin-bottom: 1rem;
+  display: inline;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 60%;
+
 }
 
 form button {
@@ -102,6 +123,22 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 90%;
+  padding: 0 20px;
+}
+
+/* ------- About ------ */
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* -------  Footer ------- */
@@ -117,3 +154,45 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/* mobile first */
+@media all and (min-width: 480px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  form {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  form button {
+    width: 180px;
+  }
+  .form-element {
+    flex-direction: column;
+    min-width: 0;
+    margin-right: 1rem;
+    padding: 0;
+  }
+
+  .form-element input, .form-element select {
+    width: 100%;
+  }
+  /* about */
+
+  #about img {
+    width: 100px;
+  }
+
+  #about div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
