@@ -32,8 +32,6 @@ section.alternate-background {
 
 main img {
   width: 100%;
-  margin-bottom: 1rem;
-
 }
 
 /* ---  Groups & Items --- */
@@ -141,6 +139,10 @@ form button {
   align-items: center;
 }
 
+#about img {
+  margin-bottom: 1rem;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -185,14 +187,46 @@ footer p {
   }
   /* about */
 
-  #about img {
-    width: 100px;
-  }
+  /* #about img {
+    width: 7rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  } */
 
   #about div {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
+  }
+
+  /*  ideas */
+
+  .group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .group-double {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .item {
+    flex: 1 1 45%; /* will have each item take up 45% of the row */
+    margin: 10px;
+  }
+
+  .item-quarter {
+    flex: 1 1 22%;
+  }
+
+  .item-half {
+    flex: 1 1 45%;
   }
 }
