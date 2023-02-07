@@ -172,7 +172,9 @@ footer p {
     align-items: center;
   }
 
-  form button {
+  form button,
+  form select,
+  form input {
     width: 180px;
   }
   .form-element {
@@ -182,16 +184,7 @@ footer p {
     padding: 0;
   }
 
-  .form-element input, .form-element select {
-    width: 100%;
-  }
   /* about */
-
-  /* #about img {
-    width: 7rem;
-    margin-right: 1rem;
-    margin-bottom: 0;
-  } */
 
   #about div {
     display: flex;
