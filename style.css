@@ -111,6 +111,7 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 60%;
+  max-width: 180px;
 
 }
 
@@ -158,31 +159,7 @@ footer p {
 /* -------  Media Query ------- */
 /* mobile first */
 @media all and (min-width: 480px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-
-
-  form {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  form button,
-  form select,
-  form input {
-    width: 180px;
-  }
-  .form-element {
-    flex-direction: column;
-    min-width: 0;
-    margin-right: 1rem;
-    padding: 0;
-  }
 
   /* about */
 
@@ -221,5 +198,32 @@ footer p {
 
   .item-half {
     flex: 1 1 45%;
+  }
+}
+
+@media all and (min-width: 768px) {
+    header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  form button,
+  form select,
+  form input {
+    width: 100%;
+    max-width: 180px;
+  }
+  .form-element {
+    flex-direction: column;
+    min-width: 0;
+    margin-right: 1rem;
+    padding: 0;
   }
 }
